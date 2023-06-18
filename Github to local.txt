@@ -1,0 +1,31 @@
+If you make changes directly on GitHub (e.g., editing a file, creating a new file, or deleting a file), and you want to sync those changes to your local repository, you can follow these steps:
+
+Open your local Git repository in your preferred Git client (e.g., Git Bash, Git command line, or a Git GUI tool).
+
+Ensure that you are in the root directory of your project. You can use the cd command to navigate to the project directory if you're not already there.
+
+Fetch the latest changes from the remote repository using the git fetch command. This command retrieves the latest commits and updates the remote tracking branches in your local repository.
+
+sql
+Copy code
+git fetch origin
+Replace origin with the name of your remote repository if you have a different remote name.
+
+Merge the changes into your local branch using the git merge command. This command combines the fetched changes with your local branch.
+
+bash
+Copy code
+git merge origin/master
+Replace origin/master with the remote branch you want to merge into your local branch. For example, if you want to sync changes from the remote master branch, use origin/master.
+
+Alternatively, you can use the git pull command, which performs both fetch and merge in a single step:
+
+Copy code
+git pull origin master
+This command fetches the changes from the remote repository and automatically merges them into your local branch.
+
+Now your local repository should be synced with the changes made on GitHub. You can verify this by checking the files and commits in your local repository.
+
+Note: Before performing the merge or pull, ensure that you don't have any uncommitted changes in your local repository. Commit or stash any local changes to avoid conflicts during the merge process.
+
+If you encounter any conflicts during the merge, Git will notify you, and you'll need to resolve the conflicts manually. Once resolved, you can proceed with the merge by committing the changes.
